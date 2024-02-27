@@ -19,7 +19,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: arvydasr/images:app-10
+      - image: arvydasr/images:app-11
         name: flaskdemo
         resources: {}
       imagePullSecrets:
