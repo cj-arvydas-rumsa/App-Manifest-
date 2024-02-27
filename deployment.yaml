@@ -20,6 +20,7 @@ spec:
     spec:
       containers:
       - image: arvydasr/images:app-8
+        platform: linux/x86_64
         name: flaskdemo
         resources: {}
       imagePullSecrets:
