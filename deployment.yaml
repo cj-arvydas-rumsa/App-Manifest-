@@ -1,5 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
+registries:
+- name: Docker Hub
+  api_url: https://registry-1.docker.io
+  ping: yes
+  credentials: pullsecret:argocd/dockerhub-secret
+  defaultns: library
 metadata:
   creationTimestamp: null
   labels:
@@ -19,7 +25,6 @@ spec:
     spec:
       containers:
       - image: arvydasr/images:app-8
-        credentials: pullsecret:argocd/dockerhub-secret
         name: flaskdemo
         resources: {}
 status: {}
