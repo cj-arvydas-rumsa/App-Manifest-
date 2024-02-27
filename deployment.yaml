@@ -18,9 +18,17 @@ spec:
       labels:
         app: flaskdemo
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd
       containers:
       - image: arvydasr/images:app-8
-        platform: linux/x86_64
         name: flaskdemo
         resources: {}
       imagePullSecrets:
