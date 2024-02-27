@@ -5,6 +5,7 @@ metadata:
   labels:
     app: flaskdemo
   name: flaskdemo
+  namespace: argocd
 spec:
   replicas: 1
   selector:
@@ -24,15 +25,6 @@ spec:
       imagePullSecrets:
         - name: dockerhub-secret
 status: {}
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: dockerhub-secret
-  namespace: argocd
-data:
-  .dockerconfigjson: ****
-type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: v1
 kind: Service
