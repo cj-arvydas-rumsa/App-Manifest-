@@ -19,6 +19,7 @@ spec:
     spec:
       containers:
       - image: arvydasr/images:app-8
+        credentials: pullsecret:argocd/dockerhub-secret
         name: flaskdemo
         resources: {}
 status: {}
