@@ -22,7 +22,7 @@ spec:
         name: flaskdemo
         resources: {}
       imagePullSecrets:
-        - name: dockerhub-secret
+        - name: argocd/dockerhub-secret
 status: {}
 ---
 apiVersion: v1
