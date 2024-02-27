@@ -1,0 +1,10 @@
+metrics:
+  enabled: true
+
+config:
+  registries:
+    - name: Docker Hub
+      credentials: argocd/dockerhub-secret#auth
+      api_url: https://registry-1.docker.io
+      ping: yes
+      default: true
